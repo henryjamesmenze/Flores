@@ -20,6 +20,75 @@ body {
   perspective: 1000px;
 }
 
+.message-text {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;
+}
+
+.message-text h1 {
+  font-family: 'Georgia', serif;
+  font-size: 4.5vmin;
+  color: #e6f331;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(230, 243, 49, 0.6),
+    0 0 40px rgba(230, 243, 49, 0.3);
+  margin: 0;
+  line-height: 1.2;
+  font-weight: bold;
+  animation: text-glow 3s ease-in-out infinite alternate;
+}
+
+.message-text .name {
+  font-size: 6vmin;
+  color: #ff6b6b;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(255, 107, 107, 0.8),
+    0 0 50px rgba(255, 107, 107, 0.4);
+  display: block;
+  margin-top: 0.5rem;
+  animation: name-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+  0% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(230, 243, 49, 0.6),
+      0 0 40px rgba(230, 243, 49, 0.3);
+  }
+  100% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 30px rgba(230, 243, 49, 0.8),
+      0 0 60px rgba(230, 243, 49, 0.5),
+      0 0 80px rgba(230, 243, 49, 0.3);
+  }
+}
+
+@keyframes name-pulse {
+  0% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 25px rgba(255, 107, 107, 0.8),
+      0 0 50px rgba(255, 107, 107, 0.4);
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 35px rgba(255, 107, 107, 1),
+      0 0 70px rgba(255, 107, 107, 0.6),
+      0 0 90px rgba(255, 107, 107, 0.3);
+    transform: scale(1.05);
+  }
+}
+
 .night {
   position: fixed;
   left: 50%;
